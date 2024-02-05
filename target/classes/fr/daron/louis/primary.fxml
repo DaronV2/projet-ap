@@ -9,11 +9,11 @@
 
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.daron.louis.PrimaryController">
    <children>
-      <Label text="Login : " textAlignment="CENTER">
+      <Label text="Login1 : " textAlignment="CENTER">
          <VBox.margin>
             <Insets />
          </VBox.margin></Label>
-      <TextField />
+      <TextField fx:id="login" />
       <Label text="Mot de passe :" textAlignment="CENTER" />
       <PasswordField />
       <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Connexion" />
