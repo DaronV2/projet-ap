@@ -18,12 +18,13 @@
             <TextField fx:id="loginEnter" layoutX="238.0" layoutY="213.0" promptText="exemple.exemple" />
             <Label layoutX="268.0" layoutY="275.0" prefHeight="18.0" prefWidth="90.0" text="Mot de passe :" textAlignment="CENTER" />
             <PasswordField fx:id="password" layoutX="238.0" layoutY="307.0" promptText="**********" />
-            <Button layoutX="274.0" layoutY="388.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="78.0" text="Connexion" />
+            <Button layoutX="274.0" layoutY="388.0" mnemonicParsing="false" onAction="#logIn" prefHeight="35.0" prefWidth="78.0" text="Connexion" />
             <ImageView fitHeight="128.0" fitWidth="200.0" layoutX="220.0" layoutY="21.0">
                <image>
                   <Image url="@../../../images/logo1.png" />
                </image>
             </ImageView>
+            <Label fx:id="wrongLabel" layoutX="312.0" layoutY="357.0" />
          </children>
       </AnchorPane>
    </center>
