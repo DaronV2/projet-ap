@@ -29,12 +29,13 @@ public class PrimaryController {
     }
 
     void checklog() throws IOException{
-        App m = new App();
+        //App m = new App();
         System.out.println(loginEnter.getText());
         System.out.println(password.getText());
         if (loginEnter.getText().toString().equals("test") && password.getText().toString().equals("test")){
             wrongLabel.setText("Connexion reussie");
-            m.changeScene("secondary");
+            
+            //m.changeScene("secondary");
         }else{
             wrongLabel.setText("Connexion non réussie");
         }
