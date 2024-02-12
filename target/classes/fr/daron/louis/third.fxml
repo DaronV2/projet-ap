@@ -15,17 +15,17 @@
    <children>
       <MenuBar layoutY="-1.0" prefHeight="28.0" prefWidth="900.0" style="-fx-background-color: #8D93A3;">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Accueil">
             <items>
               <MenuItem mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Page-1">
             <items>
               <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu mnemonicParsing="false" text="Page-2">
             <items>
               <MenuItem mnemonicParsing="false" text="About" />
             </items>
@@ -39,7 +39,7 @@
       </ImageView>
       <Pane layoutX="460.0" layoutY="37.0" prefHeight="506.0" prefWidth="441.0" style="-fx-background-color: #8D93A3;">
          <children>
-            <Label layoutX="172.0" layoutY="14.0" text="Historique">
+            <Label layoutX="172.0" layoutY="14.0" text="Historiques">
                <font>
                   <Font size="24.0" />
                </font>
