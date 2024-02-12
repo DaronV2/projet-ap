@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,13 +14,23 @@ import java.io.IOException;
  */
 public class App extends Application {
 
+    private static Stage stg;
+
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary"), 640, 480);
+        stage.setTitle("Application Galaxy Swiss Bourdin");
+        stage.setResizable(true);
+        stage.getIcons().add(new Image("file:src/main/resources/images/logo1.png"));
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void changeScene(String FXML) throws IOException{
+        Parent pane = FXMLLoader.load(getClass().getResource(FXML));
+        stg.getScene().setRoot(pane);
     }
 
     static void setRoot(String fxml) throws IOException {
