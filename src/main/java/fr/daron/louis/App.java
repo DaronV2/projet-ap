@@ -28,7 +28,7 @@ public class App extends Application {
         stage.show();
     }
 
-    public void changeScene(String FXML) throws IOException{
+    public void changeScene(String FXML) throws IOException {
         Parent pane = FXMLLoader.load(getClass().getResource(FXML));
         stg.getScene().setRoot(pane);
     }

@@ -1,31 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.daron.louis.SecondaryController">
-    <children>
-      <Text fill="#3131e4" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat de frais engages ">
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.daron.louis.SecondaryController">
+   <children>
+      <Text layoutX="795.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat de frais engages" AnchorPane.topAnchor="101.15234375">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font size="36.0" />
          </font>
       </Text>
-      <Text fill="#4340eb" strokeType="OUTSIDE" strokeWidth="0.0" text="A retourner accompagné des justificatifs au plus tard le 10 du mois qui suit l'engagement des frais">
+      <Text layoutX="576.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a retourner accompagné des justificatifs au plus tard de 10 du mois qui suit l'engagement des frais ">
          <font>
-            <Font name="System Italic" size="12.0" />
+            <Font name="System Italic" size="18.0" />
          </font>
       </Text>
-      <Line endX="100.0" startX="-903.41064453125" startY="-2.278174877166748" />
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-         <VBox.margin>
-            <Insets right="500.0" />
-         </VBox.margin>
+      <Line endX="960.0" layoutX="960.0" layoutY="239.0" startX="-960.0" />
+      <Text layoutX="418.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visiteur">
+         <font>
+            <Font size="24.0" />
+         </font>
       </Text>
-    </children>
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-</VBox>
+      <Text layoutX="539.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matricule :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="570.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField layoutX="663.0" layoutY="294.0" prefHeight="25.0" prefWidth="362.0" />
+      <TextField layoutX="663.0" layoutY="325.0" prefHeight="25.0" prefWidth="362.0" />
+      <Text layoutX="1074.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mois">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField layoutX="1190.0" layoutY="307.0" prefHeight="25.0" prefWidth="238.0" />
+      <Text layoutX="607.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frais forfaitaires">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="173.0" fitWidth="266.0" layoutX="84.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/logo1.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="671.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuitée">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="640.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repas Midi">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="640.0" layoutY="633.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kilométrage">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="772.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantité">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="957.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Montant unitaire">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="1195.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="995.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="29.00">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="998.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="80.00">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField layoutX="738.0" layoutY="515.0" />
+      <TextField layoutX="738.0" layoutY="615.0" />
+      <TextField layoutX="738.0" layoutY="565.0" />
+      <TextField layoutX="1138.0" layoutY="515.0" />
+      <TextField layoutX="1138.0" layoutY="565.0" />
+      <TextField layoutX="1138.0" layoutY="615.0" />
+      <TextField layoutX="939.0" layoutY="615.0" />
+   </children>
+</AnchorPane>
