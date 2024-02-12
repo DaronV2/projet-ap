@@ -1,6 +1,7 @@
 package fr.daron.louis;
 
 import java.io.IOException;
+import java.sql;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,7 +35,6 @@ public class PrimaryController {
         System.out.println(password.getText());
         if (loginEnter.getText().toString().equals("test") && password.getText().toString().equals("test")){
             wrongLabel.setText("Connexion reussie");
-            
             //m.changeScene("secondary");
         }else{
             wrongLabel.setText("Connexion non réussie");
