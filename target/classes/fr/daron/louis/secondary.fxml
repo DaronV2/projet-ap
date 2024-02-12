@@ -102,5 +102,31 @@
       <TextField layoutX="1138.0" layoutY="565.0" />
       <TextField layoutX="1138.0" layoutY="615.0" />
       <TextField layoutX="939.0" layoutY="615.0" />
+      <Text layoutX="895.0" layoutY="699.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autres Frais">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="772.0" layoutY="762.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="934.0" layoutY="762.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Libellé">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="1103.0" layoutY="763.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Montant">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField layoutX="714.0" layoutY="809.0" />
+      <TextField layoutX="886.0" layoutY="809.0" />
+      <TextField layoutX="1059.0" layoutY="809.0" />
+      <TextField layoutX="714.0" layoutY="859.0" />
+      <TextField layoutX="886.0" layoutY="859.0" />
+      <TextField layoutX="1059.0" layoutY="859.0" />
    </children>
 </AnchorPane>
