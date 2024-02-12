@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.daron.louis.SecondaryController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.daron.louis.SecondaryController">
     <children>
-        <Label text="Secondary View" />
-        <Button fx:id="secondaryButton" text="Switch to Primary View" onAction="#switchToPrimary" />
+      <Text fill="#3131e4" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat de frais engages ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#4340eb" strokeType="OUTSIDE" strokeWidth="0.0" text="A retourner accompagné des justificatifs au plus tard le 10 du mois qui suit l'engagement des frais">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Line endX="100.0" startX="-903.41064453125" startY="-2.278174877166748" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <VBox.margin>
+            <Insets right="500.0" />
+         </VBox.margin>
+      </Text>
     </children>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
