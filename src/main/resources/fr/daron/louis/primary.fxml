@@ -25,7 +25,7 @@
             <Label fx:id="wrongLabel" layoutX="312.0" layoutY="357.0" />
             <Button fx:id="btnConnexion" layoutX="273.0" layoutY="389.0" mnemonicParsing="false" onAction="#login" text="Connexion" />
             <Button fx:id="btn_deuxpage" layoutX="71.0" layoutY="426.0" mnemonicParsing="false" onAction="#switchToSecondary" text="2eme page" />
-            <Button fx:id="btn_troispage" layoutX="180.0" layoutY="426.0" mnemonicParsing="false" text="3eme page" />
+            <Button fx:id="btn_troispage" layoutX="180.0" layoutY="426.0" mnemonicParsing="false" onAction="#switchToThird" text="3eme page" />
          </children>
       </AnchorPane>
    </center>

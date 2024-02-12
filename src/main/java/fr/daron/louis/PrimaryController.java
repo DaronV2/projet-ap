@@ -51,4 +51,9 @@ public class PrimaryController {
         App.setRoot("secondary");
     }
 
+    @FXML
+    private void switchToThird(ActionEvent event) throws IOException{
+        App.setRoot("third");
+    }
+
 }
