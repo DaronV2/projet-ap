@@ -1,7 +1,6 @@
 package fr.daron.louis;
 
 import java.io.IOException;
-import java.sql;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +13,12 @@ public class PrimaryController {
 
     @FXML
     private Button btnConnexion;
+
+    @FXML
+    private Button btn_deuxpage;
+
+    @FXML
+    private Button btn_troispage;
 
     @FXML
     private TextField loginEnter;
@@ -42,7 +47,7 @@ public class PrimaryController {
     }
 
     @FXML
-    private void switchToSecondary() throws IOException {
+    private void switchToSecondary(ActionEvent event) throws IOException {
         App.setRoot("secondary");
     }
 
