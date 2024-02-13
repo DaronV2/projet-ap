@@ -1,9 +1,14 @@
 package fr.daron.louis;
 
 import java.io.IOException;
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+
+import java.sql.Statement;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,6 +16,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 
 public class PrimaryController {
 
@@ -32,29 +39,59 @@ public class PrimaryController {
     @FXML
     private Label wrongLabel;
 
+
     @FXML
     void login(ActionEvent event) throws IOException, SQLException {
         checklog();
     }
 
     void checklog() throws IOException, SQLException{
-        //App m = new App();
-        System.out.println(loginEnter.getText());
-        System.out.println(password.getText());
-        String url = "jbdc:mysql://127.0.0.1:3306/ap_test";
-        if (loginEnter.getText().toString().equals("test") && password.getText().toString().equals("test")){
-            wrongLabel.setText("Connexion reussie");
-           // try{
-                //Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection c = DriverManager.getConnection(url,"daron","daron");   
-            //}
-          /*  catch(Exception e ){
-                System.out.println(e);
-            }*/
-            App.setRoot("Secondary");
-            //m.changeScene("secondary");
+        String log = loginEnter.getText();
+        String pas = password.getText();
+        String url = "jdbc:mysql://localhost/ap_test";
+        System.out.println(verifierUtilisateur(log, pas));
+        if(verifierUtilisateur(log,pas)== true){
+            wrongLabel.setText("Connexion réussie");
+            App.setRoot("secondary");
         }else{
-            wrongLabel.setText("Connexion non réussie");
+            wrongLabel.setTextFill(Color.RED);
+            wrongLabel.setText("Connexion non réussi, le mot de passe ou le nom d'utilisateur n'est pas bon !");
+        }
+    }
+
+    private boolean verifierUtilisateur(String utilisateur, String mdp) throws IOException, SQLException{
+        String url = "jdbc:mysql://localhost/ap_test";
+        String userdb = "daron";
+        String passw = "daron";
+        ResultSet resultats = null;
+        Connection c = DriverManager.getConnection(url,userdb,passw);
+        Statement stmnt = c.createStatement();
+        resultats = stmnt.executeQuery("SELECT * FROM `utilisateurs` WHERE login = \""+utilisateur+"\" AND password = \""+mdp+"\" ;");
+        ResultSetMetaData rsmd = resultats.getMetaData();
+        System.out.println();
+        System.out.println(resultats.getString(1));
+        System.out.println(reponseOuPAs(resultats));
+        if (reponseOuPAs(resultats)){
+            return false; 
+        }else{
+            return true;
+        }
+        /*boolean encore = resultats.next();
+            String password = resultats.getString(3);
+            String utilisat = resultats.getString(2);
+            encore = resultats.next();*/
+    }
+
+    private boolean reponseOuPAs(ResultSet res) throws SQLException{
+        String stres = "";
+        for (int i=1;i<4;i++){
+            String valeur = res.getString(i);
+            stres = stres + valeur;
+        }
+        if (stres == " "){
+            return false;
+        }else{
+            return true;
         }
     }
 
