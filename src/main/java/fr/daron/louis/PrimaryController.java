@@ -42,58 +42,45 @@ public class PrimaryController {
 
     @FXML
     void login(ActionEvent event) throws IOException, SQLException {
-        checklog();
+        if(checklog()==true){
+            App.setRoot("secondary");
+        }
     }
 
-    void checklog() throws IOException, SQLException{
+    Boolean checklog() throws IOException, SQLException{
+
         String log = loginEnter.getText();
         String pas = password.getText();
-        String url = "jdbc:mysql://localhost/ap_test";
+
         System.out.println(verifierUtilisateur(log, pas));
-        if(verifierUtilisateur(log,pas)== true){
+
+        if(verifierUtilisateur(log,pas) == true){
             wrongLabel.setText("Connexion réussie");
-            App.setRoot("secondary");
+            return true;
         }else{
             wrongLabel.setTextFill(Color.RED);
             wrongLabel.setText("Connexion non réussi, le mot de passe ou le nom d'utilisateur n'est pas bon !");
+            return false;
         }
     }
 
     private boolean verifierUtilisateur(String utilisateur, String mdp) throws IOException, SQLException{
-        String url = "jdbc:mysql://localhost/ap_test";
-        String userdb = "daron";
-        String passw = "daron";
         ResultSet resultats = null;
-        Connection c = DriverManager.getConnection(url,userdb,passw);
+        Sqldb sql2 = new Sqldb();
+
+        Connection c = sql2.connexionDb();
         Statement stmnt = c.createStatement();
-        resultats = stmnt.executeQuery("SELECT * FROM `utilisateurs` WHERE login = \""+utilisateur+"\" AND password = \""+mdp+"\" ;");
-        ResultSetMetaData rsmd = resultats.getMetaData();
-        System.out.println();
-        System.out.println(resultats.getString(1));
-        System.out.println(reponseOuPAs(resultats));
-        if (reponseOuPAs(resultats)){
-            return false; 
+
+        String sql = String.format("SELECT id,login,password,statut FROM `utilisateurs` WHERE login = '%s'  AND password = '%s' ;", utilisateur,mdp);
+        resultats = sql2.exeRequete(stmnt, sql);
+
+        if (resultats.next() == true){
+            return true; 
         }else{
-            return true;
+            return false;
         }
-        /*boolean encore = resultats.next();
-            String password = resultats.getString(3);
-            String utilisat = resultats.getString(2);
-            encore = resultats.next();*/
     }
 
-    private boolean reponseOuPAs(ResultSet res) throws SQLException{
-        String stres = "";
-        for (int i=1;i<4;i++){
-            String valeur = res.getString(i);
-            stres = stres + valeur;
-        }
-        if (stres == " "){
-            return false;
-        }else{
-            return true;
-        }
-    }
 
     @FXML
     private void switchToSecondary(ActionEvent event) throws IOException {
