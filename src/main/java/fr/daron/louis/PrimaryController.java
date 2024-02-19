@@ -42,8 +42,12 @@ public class PrimaryController {
 
     @FXML
     void login(ActionEvent event) throws IOException, SQLException {
-        if(checklog()==true){
-            App.setRoot("secondary");
+        String log = loginEnter.getText();
+        if(checklog()==true && comptableOuNon(log) == true){
+            App.setRoot("accueil");
+        }
+        else if(checklog()==true && comptableOuNon(log) == false){
+            App.setRoot("third");
         }
     }
 
@@ -55,7 +59,7 @@ public class PrimaryController {
         System.out.println(verifierUtilisateur(log, pas));
 
         if(verifierUtilisateur(log,pas) == true){
-            wrongLabel.setText("Connexion réussie");
+
             return true;
         }else{
             wrongLabel.setTextFill(Color.RED);
@@ -71,7 +75,7 @@ public class PrimaryController {
         Connection c = sql2.connexionDb();
         Statement stmnt = c.createStatement();
 
-        String sql = String.format("SELECT id,login,password,statut FROM `utilisateurs` WHERE login = '%s'  AND password = '%s' ;", utilisateur,mdp);
+        String sql = String.format("SELECT cr_identifiant,cr_mot_de_passe FROM gsb_etudiants.credentials WHERE cr_identifiant = '%s'  AND cr_mot_de_passe = '%s' ;", utilisateur,mdp);
         resultats = sql2.exeRequete(stmnt, sql);
 
         if (resultats.next() == true){
@@ -81,6 +85,23 @@ public class PrimaryController {
         }
     }
 
+
+    private boolean comptableOuNon(String utilisateur) throws SQLException{
+        ResultSet resultats = null;
+        Sqldb sql = new Sqldb();
+        Connection c = sql.connexionDb();
+        Statement stmnt = c.createStatement();
+
+        String req = String.format("SELECT cr_identifiant FROM gsb_etudiants.credentials WHERE cr_identifiant = '%s'", utilisateur);
+
+        resultats = sql.exeRequete(stmnt, req);
+
+        if (resultats.next() == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     @FXML
     private void switchToSecondary(ActionEvent event) throws IOException {

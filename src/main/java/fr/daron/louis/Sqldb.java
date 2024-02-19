@@ -10,11 +10,11 @@ import java.sql.Statement;
 
 public class Sqldb {
     
-    private String url = "jdbc:mysql://localhost/ap_test";
+    private String url = "jdbc:mysql://localhost/gsb_etudiants";
 
-    private String user = "daron";
+    private String user = "requeteur";
 
-    private String mdp = "daron";
+    private String mdp = "J'adorelesrequetes.";
 
     Sqldb(){
     }

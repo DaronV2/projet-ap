@@ -20,7 +20,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("primary"), 1280, 720);
         stage.setTitle("Application Galaxy Swiss Bourdin");
         stage.setResizable(true);
         stage.getIcons().add(new Image("file:src/main/resources/images/logo1.png"));
