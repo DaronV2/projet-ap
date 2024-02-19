@@ -8,8 +8,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #7F7FFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -20,30 +20,31 @@
                   <Image url="@../../../images/logo1.png" />
                </image>
             </ImageView>
-         </children>
-      </Pane>
-      <Pane layoutX="94.0" layoutY="227.0" prefHeight="600.0" prefWidth="1720.0" style="-fx-background-color: #CCCCFF;">
-         <children>
-            <Label layoutX="860.0" layoutY="14.0" text="Historique :">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1720.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/logo1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="850.0" layoutY="36.0" text="Historique">
                <font>
-                  <Font size="24.0" />
+                  <Font size="48.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <MenuBar layoutX="200.0" layoutY="57.0" prefHeight="35.0" prefWidth="695.0" style="-fx-background-color: #CCCCFF;">
+      <MenuBar layoutX="200.0" layoutY="57.0" prefHeight="35.0" prefWidth="226.0" style="-fx-background-color: #CCCCFF;">
         <menus>
           <Menu mnemonicParsing="false" text="Accueil">
             <items>
               <MenuItem mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Page-1">
+          <Menu mnemonicParsing="false" text="Formulaire">
             <items>
               <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Page-2">
+          <Menu mnemonicParsing="false" text="Historique">
             <items>
               <MenuItem mnemonicParsing="false" text="About" />
             </items>
@@ -51,5 +52,107 @@
         </menus>
       </MenuBar>
       <Pane layoutX="-6.0" layoutY="937.0" prefHeight="142.0" prefWidth="1920.0" style="-fx-background-color: #CCCCFF;" />
+      <Pane layoutX="410.0" layoutY="190.0" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #CCCCFF;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="28.0" text="Vos documents ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="121.0" prefHeight="99.0" prefWidth="103.0" text="DATE ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" endY="450.0" layoutX="260.0" layoutY="220.0" startX="100.0" startY="-153.0" />
+            <Line endX="100.0" endY="450.0" layoutX="630.0" layoutY="220.0" startX="100.0" startY="-157.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="775.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="775.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="775.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/flèche.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="245.0" layoutY="355.0" text="DATE ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="558.0" text="DATE ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="567.0" layoutY="157.0" text="DATE ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="567.0" layoutY="355.0" text="DATE ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="567.0" layoutY="558.0" text="DATE ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="949.0" layoutY="164.0" text="DATE ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="949.0" layoutY="355.0" text="DATE ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="980.0" layoutY="558.0" text="Plus">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="1054.0" layoutY="152.0" />
    </children>
 </AnchorPane>
