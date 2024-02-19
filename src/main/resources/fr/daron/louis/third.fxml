@@ -34,6 +34,16 @@
       <Pane layoutX="-6.0" layoutY="937.0" prefHeight="142.0" prefWidth="1920.0" style="-fx-background-color: #CCCCFF;" />
       <Pane layoutX="410.0" layoutY="190.0" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #CCCCFF;">
          <children>
+            <Label layoutX="1003.0" layoutY="171.0" text="DATE ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="841.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/fichier.png" />
@@ -49,8 +59,8 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Line endX="100.0" endY="450.0" layoutX="260.0" layoutY="220.0" startX="100.0" startY="-153.0" />
-            <Line endX="100.0" endY="450.0" layoutX="630.0" layoutY="220.0" startX="100.0" startY="-157.0" />
+            <Line endX="100.0" endY="450.0" layoutX="214.0" layoutY="220.0" startX="100.0" startY="-153.0" />
+            <Line endX="100.0" endY="450.0" layoutX="469.0" layoutY="222.0" startX="100.0" startY="-157.0" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/fichier.png" />
@@ -61,34 +71,29 @@
                   <Image url="@../../../images/fichier.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="348.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/fichier.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="348.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/fichier.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="348.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/fichier.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="775.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="597.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/fichier.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="775.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="597.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/fichier.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="775.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/flèche.png" />
                </image>
             </ImageView>
             <Label layoutX="245.0" layoutY="355.0" text="DATE ">
@@ -101,38 +106,63 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="567.0" layoutY="157.0" text="DATE ">
+            <Label layoutX="502.0" layoutY="157.0" text="DATE ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="567.0" layoutY="355.0" text="DATE ">
+            <Label layoutX="502.0" layoutY="353.0" text="DATE ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="567.0" layoutY="558.0" text="DATE ">
+            <Label layoutX="502.0" layoutY="558.0" text="DATE ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="949.0" layoutY="164.0" text="DATE ">
+            <Label layoutX="765.0" layoutY="164.0" text="DATE ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="949.0" layoutY="355.0" text="DATE ">
+            <Label layoutX="765.0" layoutY="353.0" text="DATE ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="980.0" layoutY="558.0" text="Plus">
+            <Label layoutX="770.0" layoutY="558.0" text="DATE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="597.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <Line endX="100.0" endY="450.0" layoutX="726.0" layoutY="233.0" startX="100.0" startY="-157.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="841.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="841.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fichier.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1003.0" layoutY="342.0" text="DATE ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="1003.0" layoutY="559.0" text="DATE ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Label layoutX="1054.0" layoutY="152.0" />
    </children>
 </AnchorPane>
