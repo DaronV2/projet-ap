@@ -8,6 +8,8 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * JavaFX App
@@ -19,7 +21,7 @@ public class App extends Application {
     private static Scene scene;
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, NoSuchAlgorithmException {
         scene = new Scene(loadFXML("primary"), 1280, 720);
         stage.setTitle("Application Galaxy Swiss Bourdin");
         stage.setResizable(true);

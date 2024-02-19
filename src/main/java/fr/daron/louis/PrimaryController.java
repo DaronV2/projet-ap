@@ -1,6 +1,8 @@
 package fr.daron.louis;
 
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +19,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
+
 
 public class PrimaryController {
 
@@ -41,7 +43,7 @@ public class PrimaryController {
 
 
     @FXML
-    void login(ActionEvent event) throws IOException, SQLException {
+    void login(ActionEvent event) throws IOException, SQLException, NoSuchAlgorithmException {
         String log = loginEnter.getText();
         if(checklog()==true && comptableOuNon(log) == true){
             App.setRoot("accueil");
@@ -51,7 +53,7 @@ public class PrimaryController {
         }
     }
 
-    Boolean checklog() throws IOException, SQLException{
+    Boolean checklog() throws IOException, SQLException, NoSuchAlgorithmException{
 
         String log = loginEnter.getText();
         String pas = password.getText();
@@ -84,6 +86,19 @@ public class PrimaryController {
             return false;
         }
     }
+
+    /*private String chiffrerSha256(String password) throws NoSuchAlgorithmException{
+        MessageDigest m = MessageDigest.getInstance("SHA-256");
+        m.update(password.getBytes());
+        byte byteData[] = m.digest();
+
+        // convertir le tableau de bits en une format hexadécimal - méthode 1
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < byteData.length; i++) {
+            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
+        }
+        return sb.toString();
+    }*/
 
 
     private boolean comptableOuNon(String utilisateur) throws SQLException{
