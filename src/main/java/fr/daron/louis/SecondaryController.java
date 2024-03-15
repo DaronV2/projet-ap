@@ -58,7 +58,28 @@ public class SecondaryController {
     private TextField totalRepasMidi;
 
     @FXML
-    void switchAccueil(ActionEvent event) throws IOException{
+    void initialize() {
+        nuitee.textProperty().addListener((observable, oldValue, newValue) -> {
+            try {
+                double value = Double.parseDouble(newValue);
+                totalNuitee.setText(String.valueOf(value * 80));
+            } catch (NumberFormatException e) {
+                totalNuitee.setText("");
+            }
+        });
+
+        repasMidi.textProperty().addListener((observable, oldValue, newValue) -> {
+            try {
+                double value = Double.parseDouble(newValue);
+                totalRepasMidi.setText(String.valueOf(value * 29));
+            } catch (NumberFormatException e) {
+                totalRepasMidi.setText("");
+            }
+        });
+    }
+
+    @FXML
+    void switchAccueil(ActionEvent event) throws IOException {
         App.setRoot("primary");
     }
 
