@@ -16,6 +16,8 @@ public class ThirdController extends Application{
     @FXML
     private ImageView doc1;
 
+    String mdp;
+
     @FXML
     void accueil(ActionEvent event) throws IOException {
         App.setRoot("primary");
@@ -33,5 +35,7 @@ public class ThirdController extends Application{
     public void start(Stage arg0) throws Exception {
 
         throw new UnsupportedOperationException("Unimplemented method 'start'");
+        
     }
+    
 }
